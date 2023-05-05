@@ -7,6 +7,9 @@ from garagem.serializers import (
     AcessorioSerializer,
     ModeloSerializer,
     CorSerializer,
+    VeiculoDetailSerializer,
+    VeiculoListSerializer,
+    VeiculoSerializer,
 )
 
 
@@ -33,3 +36,15 @@ class ModeloViewSet(ModelViewSet):
 class CorViewSet(ModelViewSet):
     queryset = Cor.objects.all()
     serializer_class = CorSerializer
+
+
+class VeiculoViewSet(ModelViewSet):
+    queryset = Veiculo.objects.all()
+
+    serializer_classes = {
+        "list": VeiculoListSerializer,
+        "retrieve": VeiculoDetailSerializer,
+    }
+
+    def get_serializer_class(self):
+        return self.serializer_classes.get(self.action, VeiculoSerializer)
