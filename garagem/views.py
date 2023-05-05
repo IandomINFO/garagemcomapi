@@ -6,6 +6,7 @@ from garagem.serializers import (
     MarcaSerializer,
     AcessorioSerializer,
     ModeloSerializer,
+    CorSerializer,
 )
 
 
@@ -27,3 +28,8 @@ class AcessorioViewSet(ModelViewSet):
 class ModeloViewSet(ModelViewSet):
     queryset = Modelo.objects.all()
     serializer_class = ModeloSerializer
+
+
+class CorViewSet(ModelViewSet):
+    queryset = Cor.objects.all()
+    serializer_class = CorSerializer

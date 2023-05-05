@@ -25,3 +25,9 @@ class ModeloSerializer(ModelSerializer):
     class Meta:
         model = Modelo
         fields = "__all__"
+
+
+class CorSerializer(ModelSerializer):
+    class Meta:
+        model = Cor
+        fields = "__all__"
