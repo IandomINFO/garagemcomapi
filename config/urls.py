@@ -8,8 +8,6 @@ from garagem.views import (
     MarcaViewSet,
     AcessorioViewSet,
     ModeloViewSet,
-    CorViewSet,
-    VeiculoViewSet,
 )
 
 router = DefaultRouter()

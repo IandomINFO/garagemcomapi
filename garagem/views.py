@@ -6,10 +6,6 @@ from garagem.serializers import (
     MarcaSerializer,
     AcessorioSerializer,
     ModeloSerializer,
-    CorSerializer,
-    VeiculoDetailSerializer,
-    VeiculoListSerializer,
-    VeiculoSerializer,
 )
 
 
