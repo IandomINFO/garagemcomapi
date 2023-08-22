@@ -12,8 +12,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name="veiculo",
             name="preco",
-            field=models.DecimalField(
-                blank=True, decimal_places=2, default=0, max_digits=10, null=True
-            ),
+            field=models.DecimalField(blank=True, decimal_places=2, default=0, max_digits=10, null=True),
         ),
     ]

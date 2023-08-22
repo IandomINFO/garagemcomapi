@@ -47,13 +47,9 @@ class Modelo(models.Model):
 class Veiculo(models.Model):
     modelo = models.ForeignKey(Modelo, on_delete=models.PROTECT)
     ano = models.IntegerField(default=0, null=True, blank=True)
-    preco = models.DecimalField(
-        max_digits=10, decimal_places=2, default=0, null=True, blank=True
-    )
+    preco = models.DecimalField(max_digits=10, decimal_places=2, default=0, null=True, blank=True)
     marca = models.ForeignKey(Marca, on_delete=models.PROTECT, related_name="veiculos")
-    categoria = models.ForeignKey(
-        Categoria, on_delete=models.PROTECT, related_name="veiculos"
-    )
+    categoria = models.ForeignKey(Categoria, on_delete=models.PROTECT, related_name="veiculos")
     cor = models.ForeignKey(Cor, on_delete=models.PROTECT, related_name="veiculos")
 
     def __str__(self):

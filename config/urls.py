@@ -4,11 +4,11 @@ from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 
 from garagem.views import (
-    CategoriaViewSet,
-    MarcaViewSet,
     AcessorioViewSet,
-    ModeloViewSet,
+    CategoriaViewSet,
     CorViewSet,
+    MarcaViewSet,
+    ModeloViewSet,
     VeiculoViewSet,
 )
 

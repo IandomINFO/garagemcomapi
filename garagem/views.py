@@ -1,12 +1,12 @@
 from rest_framework.viewsets import ModelViewSet
 
-from garagem.models import Categoria, Marca, Acessorio, Modelo, Cor, Veiculo
+from garagem.models import Acessorio, Categoria, Cor, Marca, Modelo, Veiculo
 from garagem.serializers import (
-    CategoriaSerializer,
-    MarcaSerializer,
     AcessorioSerializer,
-    ModeloSerializer,
+    CategoriaSerializer,
     CorSerializer,
+    MarcaSerializer,
+    ModeloSerializer,
     VeiculoDetailSerializer,
     VeiculoListSerializer,
     VeiculoSerializer,
